@@ -20,15 +20,14 @@
 
         <!-- Header -->
         <header>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-4">
                 <h1 class="text-4xl text-center font-semibold">Block and Detail: <br />Scaffolding Sketch-to-Image
                     Generation</h1>
                 <div id="authors-info" class="flex flex-col items-center justify-center space-y-2">
                     <ul id=" authors-list" class="flex space-x-3 text-lg text-xl text-blue-400 ">
                         <li class="hover:underline hover:cursor-pointer" href="https://vsanimator.github.io/">Vishnu
                             Sarukkai</li>,
-                        <li class="hover:underline hover:cursor-pointer"
-                            href="https://www.linkedin.com/in/sylvia-yuan-38792a193">Lu Yuan*</li>,
+                        <li class="hover:underline hover:cursor-pointer" href="https://www.linkedin.com/in/sylvia-yuan-38792a193">Lu Yuan*</li>,
                         <li class="hover:underline hover:cursor-pointer" href="https://www.mia-tang.com/">Mia Tang*</li>
                         ,
                         <li class="hover:underline hover:cursor-pointer" href="https://graphics.stanford.edu/~maneesh/">
@@ -42,16 +41,13 @@
 
                 <h2 class="text-4xl">UIST 2024</h2>
                 <div id="link-btns-wrapper" class="grid place-items-center grid-cols-3">
-                    <button
-                        class="bg-blue-50 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded">
+                    <button class="bg-blue-50 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded">
                         <a href="" target="_blank">arXiv</a>
                     </button>
-                    <button
-                        class="bg-blue-50 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded">
-                        <a href="" target="_blank">Code</a>
+                    <button class="bg-blue-50 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded">
+                        <a href="https://github.com/BlockDetail/Block-and-Detail" target="_blank">Code</a>
                     </button>
-                    <button
-                        class="bg-blue-50 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded">
+                    <button class="bg-blue-50 border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded">
                         <a href="" target="_blank">Demo</a>
                     </button>
                 </div>
@@ -59,28 +55,23 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex flex-col space-y-8 mt-12">
+        <main class="flex flex-col space-y-12">
+            <section class="basis-full flex flex-col items-center justify-center">
+                <img src="assets/banner_robin.png" alt="Banner Image" class="w-full h-auto py-6" />
+                <p class="max-w-screen-lg text-sm text-slate-500">
+                    Our sketch-to-image generation tool supports the iterative refinement process artists use to create images. Users can sketch <span class="text-green-600 font-bold">blocking strokes (green) </span>to specify coarse spatial composition and <span class="font-bold text-black">detail strokes (black)</span> to specify more precise silhouettes and shapes. At any point, users can generate high-fidelity image samples that loosely follow the spatial structure of blocking strokes portraying variations in the shape and proportions of the objects the user has
+                    blocked out (e.g. the position and size of the robin after sketch 1, the placement of the branch after sketch 2.) </p>
+            </section>
             <section class="flex flex-col items-center justify-center space-y-5">
                 <h2 class="text-3xl font-semibold">Abstract</h2>
-                <p class="max-w-screen-md">
-                    We introduce a novel sketch-to-image tool that aligns with the iterative refinement process of
-                    artists. Our tool lets users sketch <b>blocking</b> strokes to coarsely represent the placement and
-                    form of objects and <b>detail</b> strokes to refine their shape and silhouettes. We develop a
-                    two-pass algorithm for generating high-fidelity images from such sketches at any point in the
-                    iterative process.
+                <p class="max-w-screen-md text-slate-700">
+                    We introduce a novel sketch-to-image tool that aligns with the iterative refinement process of artists. Our tool lets users sketch <span class="text-green-600 font-bold"><b>blocking</b></span> strokes to coarsely represent the placement and form of objects and <span class="font-bold text-black">detail</span> strokes to refine their shape and silhouettes. We develop a two-pass algorithm for generating high-fidelity images from such sketches at any point in the iterative process.
                     <br /> <br />
-                    In the first pass we use a ControlNet to generate an image that strictly follows all the strokes
-                    (blocking and detail) and in the second pass we add variation by renoising regions surrounding
-                    blocking strokes.
-                    We also present a dataset generation scheme that, when used to train a ControlNet architecture,
-                    allows regions that do not contain strokes to be interpreted as not-yet-specified regions rather
-                    than empty space.
-                    We show that this partial-sketch-aware ControlNet can generate coherent elements from partial
-                    sketches that only contain a small number of strokes.
+                    In the first pass we use a ControlNet to generate an image that strictly follows all the strokes (blocking and detail) and in the second pass we add variation by renoising regions surrounding blocking strokes.
+                    We also present a dataset generation scheme that, when used to train a ControlNet architecture, allows regions that do not contain strokes to be interpreted as not-yet-specified regions rather than empty space.
+                    We show that this partial-sketch-aware ControlNet can generate coherent elements from partial sketches that only contain a small number of strokes.
                     <br /> <br />
-                    The high-fidelity images produced by our approach serve as scaffolds that can help the user adjust
-                    the shape and proportions of objects or add additional elements to the composition.We demonstrate
-                    the effectiveness of our approach with a variety of examples and evaluative comparisons.
+                    The high-fidelity images produced by our approach serve as scaffolds that can help the user adjust the shape and proportions of objects or add additional elements to the composition.We demonstrate the effectiveness of our approach with a variety of examples and evaluative comparisons.
                 </p>
             </section>
 
@@ -120,16 +111,21 @@
             <section class="flex flex-col items-center justify-center space-y-5">
                 <h2 class="text-3xl font-semibold">Acknowledgements</h2>
                 <p class="max-w-screen-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Support for this project was provided by Meta, Activision, Andreessen Horowitz and the Brown Institute for Media Innovation. Thank you to Joon Park, Purvi Goel, James Hong, Sarah Jobalia, Yingke Wang and Sofia Wyetzner for their feedback on our tool.
                 </p>
             </section>
         </main>
 
     </div>
+    <!-- Footer -->
+    <footer class="bg-slate-100 w-screen flex items-center justify-center py-6">
+        <p class="max-w-screen-md">
+            Copyright information
+
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        </p>
+    </footer>
 
 </body>
 
