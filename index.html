@@ -16,7 +16,7 @@
 </head>
 
 <body class="text-gray-800 grid place-items-center">
-    <div class="max-w-screen-lg pt-12 pb-16">
+    <div class="pt-12 pb-16">
 
         <!-- Header -->
         <header>
@@ -51,19 +51,19 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex flex-col space-y-12">
+        <main class="flex flex-col space-y-12 w-screen">
             <section class="basis-full flex flex-col items-center justify-center">
-                <img src="assets/banner_robin.png" alt="Banner Image" class="w-full h-auto py-6" />
-                <p class="max-w-screen-lg text-sm text-slate-500">
-                    Our sketch-to-image generation tool supports the iterative refinement process artists use to create images. Users can sketch <span class="text-green-600 font-bold">blocking strokes (green) </span>to specify coarse spatial composition and <span class="font-bold text-black">detail strokes (black)</span> to specify more precise silhouettes and shapes. At any point, users can generate high-fidelity image samples that loosely follow the spatial structure of blocking strokes portraying variations in the shape and proportions of the objects the user has
+                <img src="assets/banner_robin.png" alt="Banner Image" class="max-w-screen-lg h-auto py-6" />
+                <p class="max-w-screen-md text-slate-500">
+                    Our sketch-to-image generation tool supports the iterative refinement process artists use to create images. Users can sketch <span class="text-green-600 font-bold">blocking strokes (green) </span>to specify coarse spatial composition and <span class="font-bold text-black">detail strokes (black)</span> to specify more precise silhouettes and shapes. At any point, users can generate high-fidelity image samples that loosely follow the spatial structure of <span class="text-green-600 font-bold">blocking strokes</span> portraying variations in the shape and proportions of the objects the user has
                     blocked out (e.g. the position and size of the robin after sketch 1, the placement of the branch after sketch 2.) </p>
             </section>
-            <section class="flex flex-col items-center justify-center space-y-5">
+            <section class="flex flex-col items-center justify-center space-y-5 bg-slate-100 py-8">
                 <h2 class="text-3xl font-semibold">Abstract</h2>
-                <p class="max-w-screen-md text-slate-700">
-                    We introduce a novel sketch-to-image tool that aligns with the iterative refinement process of artists. Our tool lets users sketch <span class="text-green-600 font-bold"><b>blocking</b></span> strokes to coarsely represent the placement and form of objects and <span class="font-bold text-black">detail</span> strokes to refine their shape and silhouettes. We develop a two-pass algorithm for generating high-fidelity images from such sketches at any point in the iterative process.
+                <p class="text-slate-700 max-w-screen-md">
+                    We introduce a novel sketch-to-image tool that aligns with the iterative refinement process of artists. Our tool lets users sketch <span class="text-green-600 font-bold"><b>blocking strokes</b></span> to coarsely represent the placement and form of objects and <span class="font-bold text-black">detail strokes</span> to refine their shape and silhouettes. We develop a two-pass algorithm for generating high-fidelity images from such sketches at any point in the iterative process.
                     <br /> <br />
-                    In the first pass we use a ControlNet to generate an image that strictly follows all the strokes (blocking and detail) and in the second pass we add variation by renoising regions surrounding blocking strokes.
+                    In the first pass we use a ControlNet to generate an image that strictly follows all the strokes (blocking and detail) and in the second pass we add variation by renoising regions surrounding <span class="text-green-600 font-bold">blocking strokes</span>.
                     We also present a dataset generation scheme that, when used to train a ControlNet architecture, allows regions that do not contain strokes to be interpreted as not-yet-specified regions rather than empty space.
                     We show that this partial-sketch-aware ControlNet can generate coherent elements from partial sketches that only contain a small number of strokes.
                     <br /> <br />
@@ -72,7 +72,9 @@
             </section>
 
             <section class="flex flex-col items-center justify-center space-y-5">
-                <h2 class="text-3xl font-semibold">Methods</h2>
+                <h2 class="text-3xl font-semibold">Results</h2>
+                <h3 class="text-2xl font-semibold">House Example</h3>
+                <img src="assets/results_house.png" alt="Results: House" class="max-w-screen-lg h-auto py-6" />
                 <p class="max-w-screen-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -80,16 +82,37 @@
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-            </section>
-
-            <section class="flex flex-col items-center justify-center space-y-5">
-                <h2 class="text-3xl font-semibold">Results</h2>
+                <hr />
+                <h3 class="text-2xl font-semibold">Scooter Example</h3>
+                <img src="assets/results_scooter.png" alt="Results: Scooter" class="max-w-screen-lg h-auto py-6" />
                 <p class="max-w-screen-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <hr />
+                <h3 class="text-2xl font-semibold">Daisy Example</h3>
+                <img src="assets/results_daisy.png" alt="Results: Daisy" class="max-w-screen-lg h-auto py-6" />
+                <p class="max-w-screen-md">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+            </section>
+
+            <section class="flex flex-col items-center justify-center space-y-5 bg-slate-100 py-8">
+                <h2 class="text-3xl font-semibold">Methods</h2>
+                <img src="assets/method_fig.png" alt="Banner Image" class="max-w-screen-lg h-auto py-6 drop-shadow" />
+                <p class="max-w-screen-md">
+                    Our algorithm takes as input a text prompt (“a baseball photorealistic”), and a sketch consisting of <span class="text-green-600 font-bold">blocking strokes (green) </span> and <span class="font-bold text-black">detail strokes (black)</span> . In a first pass it feeds all strokes to a partial-sketch-aware ControlNet to produce an image, denoted as 𝐼𝑡𝑐 , that tightly adheres to all strokes. Here the contour of the baseball in 𝐼𝑡𝑐 is misshapen because the input <span class="text-green-600 font-bold">blocking strokes</span> are not quite circular. To generate variation in areas surrounding the <span class="text-green-600 font-bold">blocking strokes</span>, our algorithm applies
+                    a second diffusion pass we call Blended Renoising. Based on a renoising mask formed by dilating the input strokes, blended
+                    renoising generates variation in the area surrounding <span class="text-green-600 font-bold">blocking strokes</span> while preserving areas near <span class="font-bold text-black">detail strokes</span> . The renoised
+                    output image corrects the baseball's contour, while the location of the stitching closely follows the user's detailed strokes.
                 </p>
             </section>
 
