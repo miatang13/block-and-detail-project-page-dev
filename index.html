@@ -32,7 +32,7 @@
                         <li class="hover:underline hover:cursor-pointer"><a href="https://graphics.stanford.edu/~kayvonf/"> Kayvon Fatahalian </a> </li>
                     </ul>
                     <h2 class=" text-xl">Stanford University</h2>
-                    <span class="text-sm text-slate-500"> *Denotes equal contribution </span>
+                    <span class="text-sm text-slate-1000"> *Denotes equal contribution </span>
                 </div>
 
                 <h2 class="text-3xl">UIST 2024</h2>
@@ -54,7 +54,7 @@
         <main class="flex flex-col space-y-12 w-screen">
             <section class="basis-full flex flex-col items-center justify-center">
                 <img src="assets/banner_robin.png" alt="Banner Image" class="max-w-screen-lg h-auto py-6" />
-                <p class="max-w-screen-md text-slate-500">
+                <p class="max-w-screen-md text-slate-1000">
                     Our sketch-to-image generation tool supports the iterative refinement process artists use to create images. Users can sketch <span class="text-green-600 font-bold">blocking strokes (green) </span>to specify coarse spatial composition and <span class="font-bold text-black">detail strokes (black)</span> to specify more precise silhouettes and shapes. At any point, users can generate high-fidelity image samples that loosely follow the spatial structure of <span class="text-green-600 font-bold">blocking strokes</span> portraying variations in the shape and proportions of the objects the user has
                     blocked out (e.g. the position and size of the robin after sketch 1, the placement of the branch after sketch 2.) </p>
             </section>
@@ -80,11 +80,16 @@
                 </video>
             </section>
 
-            <section class="flex flex-col items-center justify-center space-y-5 bg-slate-100">
+            <section class="flex flex-col items-center justify-center space-y-5">
+                <h2 class="text-3xl font-semibold">Results</h2>
+                <p> Put with and without blocking comparisons here</p>
+            </section>
+
+            <section class="flex flex-col items-center justify-center space-y-5">
                 <h2 class="text-3xl font-semibold">Sequence Examples</h2>
                 <h3 class="text-2xl font-semibold">House Example</h3>
                 <img src="assets/results_house.png" alt="Results: House" class="max-w-screen-lg h-auto py-6" />
-                <ul class="max-w-screen-md text-normal text-slate-500 space-y-5">
+                <ul class="max-w-screen-md text-normal text-slate-1000 space-y-5">
                     <li>
                         <b><i>Sketch 1: </i></b>Started by blocking out the general location and orientation of the house. Used the generated image samples 1 for further guidance on perspective and details.
                     </li>
