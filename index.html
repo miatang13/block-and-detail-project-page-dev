@@ -237,6 +237,29 @@
     </div>
   </section>
 
+  <!-- methods -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Why we need blocking strokes</h2>
+          <div id="results-carousel" class="carousel results-carousel" data-slides-to-show="1">
+            <div class="carousel-slide">
+              <img src="static/images/blockingfig_1.png" alt="House">
+            </div>
+            <div class="carousel-slide">
+              <img src="static/images/blockingfig_2.png" alt="House">
+            </div>
+          </div>
+          <div class="content has-text-justified mt-4">
+            <p> In early stages of sketching, artists often specify object forms via rough blocking strokes. Standard ControlNet adheres too strictly to these strokes, creating images with object forms that are unrealistic or poorly proportioned (misshaped cat, overly circular flower, poorly proportioned scooter, simplified cupcake silhouette). Instead, our algorithm treats blocking strokes as rough guidelines for object form, enabling artists to generate visual inspiration that is both realistic and accurately matches their intent. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- methods -->
+
   <!-- Walkthroughs -->
   <section class="section">
     <div class="container is-max-desktop">
@@ -264,6 +287,8 @@
     </div>
   </section>
 
+
+
   <!-- methods -->
   <section class="section bg-slate-100">
     <div class="container is-max-desktop">
@@ -279,6 +304,63 @@
     </div>
   </section>
   <!-- methods -->
+
+
+  <!-- dilation -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">How to loosen spatial control</h2>
+          <div class="flex justify-center">
+            <img src="./static/images/renoise_cnet_dilation.png" alt="Renoise Strength Figure" width="700px" />
+          </div>
+
+          <div class="content has-text-justified mt-4">
+            <p> Dilation radius is more interpretable as a parameter for loosening spatial control than ControlNet strength. As the dilation radius of blocking strokes 𝜎<sub>𝑏</sub> increases, our algorithm maintains the rough shape of the vase while gradually allowing greater variation in the exact shape of its contour. In contrast, varying the ControlNet guidance strength without dilating the stokes leads to sudden unpredictable behavior as the strength is decreased. We lose adherence to the strokes as the hands appear in the third image and the vase completely loses its form by the fourth image.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- dilation -->
+
+
+  <!-- partial control controlnet -->
+  <section class="section bg-slate-100">
+    <div class="container is-max-desktop">
+      <div>
+
+        <!--images-->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-max-desktop">
+            <h2 class="title is-3">Synthetic Data for Partial-Sketch-Aware ControlNet</h2>
+            <div class="columns place-items-center">
+              <div class="column">
+                <img src="./static/images/synthetic_data_gen.png" alt="Synthetic Data Generation Figure" />
+                <caption>Synthetic data generation</caption>
+              </div>
+              <div class="column">
+                <img src="./static/images/partial_ctnet_results.png" alt="Partial ControlNet Figure" />
+                <caption>Our Partial-Sketch-Aware ControlNet vs Scribble ControlNet</caption>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!--images-->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified mt-4 ">
+              <p> Dilation radius is more interpretable as a parameter for loosening spatial control than ControlNet strength. As the dilation radius of blocking strokes 𝜎<sub>𝑏</sub> increases, our algorithm maintains the rough shape of the vase while gradually allowing greater variation in the exact shape of its contour. In contrast, varying the ControlNet guidance strength without dilating the stokes leads to sudden unpredictable behavior as the strength is decreased. We lose adherence to the strokes as the hands appear in the third image and the vase completely loses its form by the fourth image.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- partial control controlnet -->
 
 
   <!-- Acknowledgement -->
