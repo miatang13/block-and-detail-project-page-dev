@@ -178,3 +178,7 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.is-light { 
+  background-color: rgb(250, 250, 250) !important;
+}
