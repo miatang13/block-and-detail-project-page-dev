@@ -130,6 +130,26 @@ body {
   margin: 0;
 }
 
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 400px; Set a static height for the carousel */
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Match the static height of the carousel */
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image fits without stretching */
+}
 
 .interpolation-panel {
   background: #f5f5f5;
